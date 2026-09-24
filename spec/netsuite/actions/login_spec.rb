@@ -50,6 +50,9 @@ describe NetSuite::Actions::Login do
       token_secret '123'
 
       api_version '2017_2'
+
+      # changing api_version resets the wsdl; keep using the local fixture
+      wsdl File.expand_path('../../../support/2015.wsdl', __FILE__)
     end
 
     message = {"platformMsgs:passport"=>{"platformCore:email"=>"email", "platformCore:password"=>"password", "platformCore:account"=>"1234", "platformCore:role"=>234}}

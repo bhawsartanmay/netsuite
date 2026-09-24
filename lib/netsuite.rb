@@ -1,3 +1,6 @@
+require 'base64'
+require 'logger'
+require 'ostruct'
 require 'set'
 
 require 'savon'
