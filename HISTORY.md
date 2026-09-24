@@ -6,6 +6,9 @@
 
 ### Fixed
 * Revert recent proxy changes which breaks proxy usage by @andrewdicken-stripe in https://github.com/NetSweet/netsuite/pull/579
+* Support Ruby 3.4 / 4.0: require `base64`, `logger` and `ostruct` explicitly and declare them as dependencies
+* Remove dependence on ActiveSupport's `Object#blank?` in `Configuration#auth_header` and `DeleteList#success?`
+* Use the 2025_1 WSDL in `Utilities.netsuite_data_center_urls`; the 2017_2 WSDL has been retired by NetSuite
 
 ### Breaking Changes
 
